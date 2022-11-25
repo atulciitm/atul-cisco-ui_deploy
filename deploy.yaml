@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: atul-app-ui
+  name: atul-app-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atul-app-ui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: atul-app-ui
+    spec:
+      containers:
+      - image: atulciitm/atul-ui-app:app1
+        name: atul-ui-app
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
